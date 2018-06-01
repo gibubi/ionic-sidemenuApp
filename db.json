@@ -29,6 +29,54 @@
       "name": "test",
       "cost": 100,
       "quantity": 50
+    },
+    {
+      "name": "등록자",
+      "cost": "101",
+      "quantity": "102",
+      "id": 6
+    },
+    {
+      "name": "등록1",
+      "cost": "11",
+      "quantity": "12",
+      "id": 7
+    },
+    {
+      "name": "111",
+      "cost": "222",
+      "quantity": "333",
+      "id": 8
+    },
+    {
+      "name": "2-1",
+      "cost": "2",
+      "quantity": "3",
+      "id": 9
+    },
+    {
+      "name": "3-1",
+      "cost": "3",
+      "quantity": "4",
+      "id": 10
+    },
+    {
+      "name": "55",
+      "cost": "555",
+      "quantity": "55",
+      "id": 12
+    },
+    {
+      "name": "2-2",
+      "cost": "22",
+      "quantity": "22",
+      "id": 13
+    },
+    {
+      "name": "4-1",
+      "cost": "4",
+      "quantity": "4",
+      "id": 14
     }
   ]
 }
