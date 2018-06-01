@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, ModalController, NavController} from 'ionic-angular';
 import {Profile} from "../../interfaces/profile";
 import {Account} from "../../interfaces/account";
+import {SMS} from "@ionic-native/sms";
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               public modalCtrl : ModalController,
-              public alertCtrl : AlertController
+              public alertCtrl : AlertController,
+              private sms:SMS
               ) {
 
   }
@@ -73,6 +75,25 @@ export class HomePage {
             this.accountData = {name:data.name, email:data.email};
             this.navCtrl.push('NavPage', {account:this.accountData});
           }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
+  //
+  sendSMS(){
+    let prompt = this.alertCtrl.create({
+      title   : 'SMS 전송',
+      message : '전화번호와 메시지 입력',
+      inputs  :[
+        { name : 'phone',   placeholder : 'phone number'},
+        { name : 'message', placeholder : 'message ...'}
+      ],
+      buttons:[
+        { text : '취소', handler:data => console.log('취소됨')},
+        { text : '보내기',
+            handler : data => this.sms.send(data.phone, data.message)
         }
       ]
     });
